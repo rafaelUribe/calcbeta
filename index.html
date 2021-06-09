@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div></div>
+        <div>
+            <h1>Calculadora de tasa y amortización</h1>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="inputs">
+                <div><p>Valor Factura</p></div>
+                <div><input type="text" id="vf" value="0"></div>
+
+                <div><p>Comisión Apertura</p></div>
+                <div><input type="text" id="cxa" value="0"></div>
+
+                <div><p>Monto Financiar</p></div>
+                <div>
+                    <p type="text" id="mf">0</p>
+                </div>
+
+                <div><p>Residual</p></div>
+                <div><input type="text" id="vr" value="0"></div>
+
+                <div><p>Plazo</p></div>
+                <div>
+                    <select type="" id="pz">
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                        <option value="36">36</option>
+                        <option value="48">48</option>
+                    </select>
+                </div>
+
+                <div><p>Pago</p></div>
+                <div><p id="pago">0</p></div>
+
+                <div><p>Iva</p></div>
+                <div><p id="iva">0</p></div>
+
+                <div><p>Renta Total</p></div>
+                <div><input type="text" id="pagomasiva" value="0"></div>
+
+                <div><p>Gastos Investigación</p></div>
+                <div><input type="text" id="gi" value="0"></div>
+
+                <div><p>Tasa</p></div>
+                <div>
+                    <p><span id="i">18</span><span>%</span></p>
+                </div>
+            </div>
+
+            <div class="inputs">
+                <div><p>%Valor Residual</p></div>
+                <div><p id="%vr">0</p></div>
+
+                <div><p>%Comisión Apertura</p></div>
+                <div><p id="%cxa">0</p></div>
+
+                <div><p>%Gastos de Investigación</p></div>
+                <div><p id="%gi">0</p></div>
+            
+            </div>
+        </div>
+    </main>
+    <!-- <script src="/Financeexcelrate.js"></script> -->
+    <script src="calc.js"></script>
+</body>
+</html>
