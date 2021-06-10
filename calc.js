@@ -135,25 +135,20 @@ function obtenerPorcentajeGI() {
 }
 
 function obtenerTasa() {
-    tasa = RI(plazo, pago, -mf, vr, 0, 0.1)
+    tasa = getRate(plazo, pago, -mf, vr, 0, 0.1)
     tasa = tasa * 100
     inputi.innerHTML = tasa.toFixed(2)
 }
 
-// function RI(paymentsPerYear, paymentAmount, presentValue, futureValue, dueEndOrBeginning, interest)
-
-function RI(periods, payment, present, future, type, guess) {
+function getRate(periods, payment, present, future, type, guess) {
     guess = (guess === undefined) ? 0.01 : guess;
     future = (future === undefined) ? 0 : future;
     type = (type === undefined) ? 0 : type;
   
-    // Set maximum epsilon for end of iteration
     var epsMax = 1e-10;
   
-    // Set maximum number of iterations
     var iterMax = 10;
   
-    // Implement Newton's method
     var y, y0, y1, x0, x1 = 0,
       f = 0,
       i = 0;
